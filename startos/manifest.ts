@@ -19,15 +19,14 @@ export const manifest = setupManifest({
     main: {
       source: {
         dockerBuild: {
-          dockerfile: 'sync-server.Dockerfile',
+          dockerfile: './actual/sync-server.Dockerfile',
           workdir: './actual',
         },
       },
     },
   },
   alerts: {
-    install:
-      'After installation, you will be prompted to set a password on first access.',
+    install: null,
     update: null,
     uninstall: 'All budget data will be deleted.',
     restore: null,
