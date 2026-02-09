@@ -1,4 +1,5 @@
 import { setupManifest } from '@start9labs/start-sdk'
+import { short, long, alertUninstall } from './i18n'
 
 export const manifest = setupManifest({
   id: 'actual-budget',
@@ -10,25 +11,23 @@ export const manifest = setupManifest({
   marketingSite: 'https://actualbudget.org/',
   donationUrl: 'https://opencollective.com/actual',
   docsUrl: 'https://actualbudget.org/docs/',
-  description: {
-    short: 'A local-first personal finance app',
-    long: 'Actual Budget is a super fast and privacy-focused app for managing your finances using the envelope budgeting methodology. Your data stays local with optional sync across devices.',
-  },
+  description: { short, long },
   volumes: ['main'],
   images: {
     main: {
       source: {
         dockerBuild: {
-          dockerfile: './actual/sync-server.Dockerfile',
           workdir: './actual',
+          dockerfile: './actual/sync-server.Dockerfile',
         },
       },
+      arch: ['x86_64', 'aarch64'],
     },
   },
   alerts: {
     install: null,
     update: null,
-    uninstall: 'All budget data will be deleted.',
+    uninstall: alertUninstall,
     restore: null,
     start: null,
     stop: null,

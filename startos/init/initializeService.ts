@@ -1,4 +1,5 @@
 import { utils } from '@start9labs/start-sdk'
+import { i18n } from '../i18n'
 import { sdk } from '../sdk'
 import { storeJson } from '../fileModels/store.json'
 import { getAdminPassword } from '../actions/getAdminPassword'
@@ -13,7 +14,6 @@ export const initializeService = sdk.setupOnInit(async (effects, kind) => {
   })
   await storeJson.write(effects, { adminPassword })
 
-  // Create subcontainer to run server for bootstrapping
   const appSub = await sdk.SubContainer.of(
     effects,
     { imageId: 'main' },
@@ -26,7 +26,6 @@ export const initializeService = sdk.setupOnInit(async (effects, kind) => {
     'actual-budget-init',
   )
 
-  // Start server daemon, then run bootstrap oneshot that depends on it
   await sdk.Daemons.of(effects)
     .addDaemon('server', {
       subcontainer: appSub,
@@ -55,6 +54,6 @@ export const initializeService = sdk.setupOnInit(async (effects, kind) => {
     .runUntilSuccess(120_000)
 
   await sdk.action.createOwnTask(effects, getAdminPassword, 'critical', {
-    reason: 'Retrieve the admin password',
+    reason: i18n('Retrieve the admin password'),
   })
 })

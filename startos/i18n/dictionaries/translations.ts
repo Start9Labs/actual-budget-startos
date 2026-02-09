@@ -1,0 +1,48 @@
+import { LangDict } from './default'
+
+export default {
+  es_ES: {
+    0: '¡Iniciando Actual Budget!',
+    1: 'Interfaz web',
+    2: 'La interfaz web está lista',
+    3: 'La interfaz web no está lista',
+    4: 'Interfaz web',
+    5: 'La interfaz web de Actual Budget',
+    6: 'Obtener contraseña de administrador',
+    7: 'Recuperar la contraseña de Actual Budget',
+    8: 'Recuperar la contraseña de administrador',
+  },
+  de_DE: {
+    0: 'Starte Actual Budget!',
+    1: 'Weboberfläche',
+    2: 'Die Weboberfläche ist bereit',
+    3: 'Die Weboberfläche ist nicht bereit',
+    4: 'Weboberfläche',
+    5: 'Die Weboberfläche von Actual Budget',
+    6: 'Admin-Passwort abrufen',
+    7: 'Passwort für Actual Budget abrufen',
+    8: 'Admin-Passwort abrufen',
+  },
+  pl_PL: {
+    0: 'Uruchamianie Actual Budget!',
+    1: 'Interfejs webowy',
+    2: 'Interfejs webowy jest gotowy',
+    3: 'Interfejs webowy nie jest gotowy',
+    4: 'Interfejs webowy',
+    5: 'Interfejs webowy Actual Budget',
+    6: 'Pobierz hasło administratora',
+    7: 'Pobierz hasło do Actual Budget',
+    8: 'Pobierz hasło administratora',
+  },
+  fr_FR: {
+    0: 'Démarrage de Actual Budget !',
+    1: 'Interface web',
+    2: "L'interface web est prête",
+    3: "L'interface web n'est pas prête",
+    4: 'Interface web',
+    5: "L'interface web de Actual Budget",
+    6: "Obtenir le mot de passe d'administration",
+    7: "Récupérer le mot de passe d'Actual Budget",
+    8: "Récupérer le mot de passe d'administration",
+  },
+} satisfies Record<string, LangDict>

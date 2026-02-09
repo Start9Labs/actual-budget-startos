@@ -1,3 +1,4 @@
+import { i18n } from '../i18n'
 import { sdk } from '../sdk'
 import { storeJson } from '../fileModels/store.json'
 
@@ -5,8 +6,8 @@ export const getAdminPassword = sdk.Action.withoutInput(
   'get-admin-password',
 
   async ({ effects }) => ({
-    name: 'Get Admin Password',
-    description: 'Retrieve the password for Actual Budget',
+    name: i18n('Get Admin Password'),
+    description: i18n('Retrieve the password for Actual Budget'),
     warning: null,
     allowedStatuses: 'any',
     group: null,

@@ -1,8 +1,9 @@
+import { i18n } from './i18n'
 import { sdk } from './sdk'
 import { uiPort } from './utils'
 
 export const main = sdk.setupMain(async ({ effects }) => {
-  console.info('Starting Actual Budget!')
+  console.info(i18n('Starting Actual Budget!'))
 
   return sdk.Daemons.of(effects).addDaemon('primary', {
     subcontainer: await sdk.SubContainer.of(
@@ -18,11 +19,11 @@ export const main = sdk.setupMain(async ({ effects }) => {
     ),
     exec: { command: ['node', 'build/app.js'] },
     ready: {
-      display: 'Web Interface',
+      display: i18n('Web Interface'),
       fn: () =>
         sdk.healthCheck.checkPortListening(effects, uiPort, {
-          successMessage: 'The web interface is ready',
-          errorMessage: 'The web interface is not ready',
+          successMessage: i18n('The web interface is ready'),
+          errorMessage: i18n('The web interface is not ready'),
         }),
     },
     requires: [],
