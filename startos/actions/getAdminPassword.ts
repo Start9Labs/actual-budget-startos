@@ -18,7 +18,7 @@ export const getAdminPassword = sdk.Action.withoutInput(
     const password = await storeJson.read((s) => s.adminPassword).once()
 
     return {
-      version: '1' as const,
+      version: '1',
       title: 'Admin Password',
       message: 'Use this password to log in to Actual Budget:',
       result: {
