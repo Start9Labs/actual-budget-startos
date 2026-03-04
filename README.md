@@ -7,7 +7,7 @@
 > **Upstream docs:** <https://actualbudget.org/docs/>
 >
 > Everything not listed in this document should behave the same as upstream
-> Actual Budget v26.2.0. If a feature, setting, or behavior is not mentioned
+> Actual Budget. If a feature, setting, or behavior is not mentioned
 > here, the upstream documentation is accurate and fully applicable.
 
 Actual Budget is a local-first personal finance app with envelope budgeting, multi-device sync, and bank import support. This repository packages it for [StartOS](https://github.com/Start9Labs/start-os).
@@ -120,7 +120,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for build instructions and development wo
 
 ```yaml
 package_id: actual-budget
-upstream_version: 26.2.0
+upstream_version: latest
 image: built from upstream sync-server.Dockerfile
 architectures: [x86_64, aarch64]
 volumes:
