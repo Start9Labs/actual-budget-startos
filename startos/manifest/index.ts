@@ -5,7 +5,7 @@ export const manifest = setupManifest({
   id: 'actual-budget',
   title: 'Actual Budget',
   license: 'MIT',
-  packageRepo: 'https://github.com/Start9Labs/actual-budget-startos/tree/update/040',
+  packageRepo: 'https://github.com/Start9Labs/actual-budget-startos',
   upstreamRepo: 'https://github.com/actualbudget/actual',
   marketingUrl: 'https://actualbudget.org/',
   donationUrl: 'https://opencollective.com/actual',
