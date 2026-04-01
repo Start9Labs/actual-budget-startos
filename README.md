@@ -27,6 +27,7 @@ Actual Budget is a local-first personal finance app with envelope budgeting, mul
 - [Actions](#actions-startos-ui)
 - [Backups and Restore](#backups-and-restore)
 - [Health Checks](#health-checks)
+- [Dependencies](#dependencies)
 - [Limitations and Differences](#limitations-and-differences)
 - [What Is Unchanged from Upstream](#what-is-unchanged-from-upstream)
 
@@ -94,6 +95,10 @@ The `main` volume is backed up, which includes all budget data and server files.
 | Check | Method | Messages |
 |-------|--------|----------|
 | Web Interface | Port listening (5006) | Ready: "The web interface is ready" |
+
+## Dependencies
+
+None.
 
 ## Limitations and Differences
 
