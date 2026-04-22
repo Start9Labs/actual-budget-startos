@@ -45,7 +45,7 @@ export const bootstrapServer = sdk.setupOnInit(async (effects, kind) => {
         },
         requires: ['server'],
       })
-      .runUntilSuccess(120_000)
+      .runUntilSuccess(300_000)
 
     await sdk.action.createOwnTask(effects, getAdminPassword, 'critical', {
       reason: i18n('Retrieve the admin password'),
