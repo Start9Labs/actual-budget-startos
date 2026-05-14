@@ -9,7 +9,6 @@ export const manifest = setupManifest({
   upstreamRepo: 'https://github.com/actualbudget/actual',
   marketingUrl: 'https://actualbudget.org/',
   donationUrl: 'https://opencollective.com/actual',
-  docsUrls: ['https://actualbudget.org/docs/'],
   description: { short, long },
   volumes: ['main'],
   images: {
