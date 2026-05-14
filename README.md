@@ -37,7 +37,7 @@ Actual Budget is a local-first personal finance app with envelope budgeting, mul
 
 | Property | Value |
 |----------|-------|
-| Image | Built from upstream `sync-server.Dockerfile` |
+| Image | Built from `sync-server.Dockerfile` (vendored copy of upstream's, with a fix that materializes `@actual-app/crdt` into `node_modules/` so the final stage can resolve it) |
 | Architectures | x86_64, aarch64 |
 | Entrypoint | `node build/app.js` |
 
@@ -126,7 +126,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for build instructions and development wo
 ```yaml
 package_id: actual-budget
 upstream_version: latest
-image: built from upstream sync-server.Dockerfile
+image: built from sync-server.Dockerfile (vendored copy of upstream's with a fix for @actual-app/crdt resolution)
 architectures: [x86_64, aarch64]
 volumes:
   main: /data
