@@ -16,7 +16,7 @@ export const manifest = setupManifest({
       source: {
         dockerBuild: {
           workdir: './actual',
-          dockerfile: './actual/sync-server.Dockerfile',
+          dockerfile: './sync-server.Dockerfile',
         },
       },
       arch: ['x86_64', 'aarch64'],
