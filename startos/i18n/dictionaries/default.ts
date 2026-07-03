@@ -17,6 +17,9 @@ const dict = {
 
   // init/initializeService.ts
   'Retrieve the admin password': 8,
+
+  // init/bootstrapServer.ts
+  'Creating the Actual Budget admin account': 9,
 } as const
 
 /**

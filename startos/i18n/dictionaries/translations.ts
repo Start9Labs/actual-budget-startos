@@ -11,6 +11,7 @@ export default {
     6: 'Obtener contraseña de administrador',
     7: 'Recuperar la contraseña de Actual Budget',
     8: 'Recuperar la contraseña de administrador',
+    9: 'Creando la cuenta de administrador de Actual Budget',
   },
   de_DE: {
     0: 'Starte Actual Budget!',
@@ -22,6 +23,7 @@ export default {
     6: 'Admin-Passwort abrufen',
     7: 'Passwort für Actual Budget abrufen',
     8: 'Admin-Passwort abrufen',
+    9: 'Actual Budget-Administratorkonto wird erstellt',
   },
   pl_PL: {
     0: 'Uruchamianie Actual Budget!',
@@ -33,6 +35,7 @@ export default {
     6: 'Pobierz hasło administratora',
     7: 'Pobierz hasło do Actual Budget',
     8: 'Pobierz hasło administratora',
+    9: 'Tworzenie konta administratora Actual Budget',
   },
   fr_FR: {
     0: 'Démarrage de Actual Budget !',
@@ -44,5 +47,6 @@ export default {
     6: "Obtenir le mot de passe d'administration",
     7: "Récupérer le mot de passe d'Actual Budget",
     8: "Récupérer le mot de passe d'administration",
+    9: "Création du compte d'administration d'Actual Budget",
   },
 } satisfies Record<string, LangDict>

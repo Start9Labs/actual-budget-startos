@@ -18,11 +18,3 @@ export const long = {
   fr_FR:
     'Actual Budget est une application ultra-rapide et axée sur la confidentialité pour gérer vos finances en utilisant la méthode budgétaire par enveloppes. Vos données restent locales avec une synchronisation optionnelle entre appareils.',
 }
-
-export const alertUninstall = {
-  en_US: 'All budget data will be deleted.',
-  es_ES: 'Todos los datos de presupuesto serán eliminados.',
-  de_DE: 'Alle Budget-Daten werden gelöscht.',
-  pl_PL: 'Wszystkie dane budżetowe zostaną usunięte.',
-  fr_FR: 'Toutes les données budgétaires seront supprimées.',
-}
