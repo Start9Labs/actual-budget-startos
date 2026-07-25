@@ -35,22 +35,22 @@ Actual Budget is a local-first personal finance app with envelope budgeting, mul
 
 ## Image and Container Runtime
 
-| Property | Value |
-|----------|-------|
-| Image | Built from `sync-server.Dockerfile` (vendored copy of upstream's, with a fix that materializes `@actual-app/crdt` into `node_modules/` so the final stage can resolve it) |
-| Architectures | x86_64, aarch64 |
-| Entrypoint | `node build/app.js` |
+| Property      | Value                                                                                                                                                                     |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Image         | Built from `sync-server.Dockerfile` (vendored copy of upstream's, with a fix that materializes `@actual-app/crdt` into `node_modules/` so the final stage can resolve it) |
+| Architectures | x86_64, aarch64                                                                                                                                                           |
+| Entrypoint    | `node build/app.js`                                                                                                                                                       |
 
 ## Volume and Data Layout
 
-| Volume | Mount Point | Purpose |
-|--------|-------------|---------|
-| `main` | `/data` | All persistent data (budgets, user files, server files) |
+| Volume | Mount Point | Purpose                                                 |
+| ------ | ----------- | ------------------------------------------------------- |
+| `main` | `/data`     | All persistent data (budgets, user files, server files) |
 
 StartOS-specific files in the `main` volume:
 
-| File | Purpose |
-|------|---------|
+| File         | Purpose                                  |
+| ------------ | ---------------------------------------- |
 | `store.json` | Stores the auto-generated admin password |
 
 ## Installation and First-Run Flow
@@ -65,17 +65,17 @@ On install, StartOS:
 
 ## Configuration Management
 
-| StartOS-Managed | Upstream-Managed |
-|-----------------|------------------|
+| StartOS-Managed                            | Upstream-Managed                                  |
+| ------------------------------------------ | ------------------------------------------------- |
 | Admin password (auto-generated on install) | All budget settings, bank sync, categories, rules |
 
 All application settings are managed through the Actual Budget web UI, just like upstream.
 
 ## Network Access and Interfaces
 
-| Interface | Port | Protocol | Purpose |
-|-----------|------|----------|---------|
-| Web UI | 5006 | HTTP | Actual Budget web application |
+| Interface | Port | Protocol | Purpose                       |
+| --------- | ---- | -------- | ----------------------------- |
+| Web UI    | 5006 | HTTP     | Actual Budget web application |
 
 ## Actions (StartOS UI)
 
@@ -92,8 +92,8 @@ The `main` volume is backed up, which includes all budget data and server files.
 
 ## Health Checks
 
-| Check | Method | Messages |
-|-------|--------|----------|
+| Check         | Method                | Messages                            |
+| ------------- | --------------------- | ----------------------------------- |
 | Web Interface | Port listening (5006) | Ready: "The web interface is ready" |
 
 ## Dependencies
@@ -117,7 +117,7 @@ None.
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for build instructions and development workflow.
+Build and development workflow follow the StartOS packaging guide: <https://docs.start9.com/packaging>. Keep `README.md`, `instructions.md`, and `AGENTS.md` in sync with any change to user-visible behavior or package structure.
 
 ---
 
