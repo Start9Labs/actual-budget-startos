@@ -1,58 +1,48 @@
 import { VersionInfo, IMPOSSIBLE } from '@start9labs/start-sdk'
 
 export const current = VersionInfo.of({
-  version: '26.8.0:0',
+  version: '26.8.1:0',
   releaseNotes: {
-    en_US: `Updated Actual Budget to 26.8.0.
+    en_US: `Updated Actual Budget to 26.8.1, a bugfix release.
 
-- The Age of Money report and Payee Locations are now stable features.
-- Redesigned onboarding and a smoother first-account setup.
-- Mobile: reconcile accounts, and set up bank sync providers and link accounts from the Bank Sync page.
-- Reports: day-level date range selection, and CSV export for Budget Analysis.
-- Server passwords are now hashed with argon2id instead of bcrypt; existing passwords are upgraded automatically on your next login, so no action is needed.
-- Many bank sync fixes (GoCardless, SimpleFIN, Pluggy) and OIDC login fixes.
+- Fixes intermittent app freezes with 100% CPU usage.
+- Fixes the transaction list getting slower as a budget grows, especially when adding, clearing, or deleting transactions and when reconciling.
+- Fixes the context menu showing on multi-account views.
+- Restores the "Delete" option in the schedule row menu on the Schedules page.
 
-Full release notes: https://actualbudget.org/blog/release-26.8.0`,
-    es_ES: `Actualiza Actual Budget a 26.8.0.
+Full release notes: https://actualbudget.org/blog/release-26.8.1`,
+    es_ES: `Actualiza Actual Budget a 26.8.1, una versión de corrección de errores.
 
-- El informe Age of Money y las Ubicaciones de beneficiarios ya son funciones estables.
-- Pantallas de bienvenida rediseñadas y configuración más sencilla de la primera cuenta.
-- Móvil: conciliación de cuentas, y configuración de proveedores de sincronización bancaria y vinculación de cuentas desde la página de sincronización bancaria.
-- Informes: selección de rangos de fechas por día y exportación a CSV del Análisis de presupuesto.
-- Las contraseñas del servidor ahora se cifran con argon2id en lugar de bcrypt; las existentes se actualizan automáticamente en el próximo inicio de sesión, no es necesario hacer nada.
-- Numerosas correcciones de sincronización bancaria (GoCardless, SimpleFIN, Pluggy) y de inicio de sesión OIDC.
+- Corrige los bloqueos intermitentes de la aplicación con un 100 % de uso de CPU.
+- Corrige la ralentización de la lista de transacciones a medida que crece el presupuesto, especialmente al añadir, confirmar o eliminar transacciones y al conciliar.
+- Corrige la aparición del menú contextual en las vistas de varias cuentas.
+- Restaura la opción «Eliminar» en el menú de fila de la página de Programaciones.
 
-Notas completas de la versión: https://actualbudget.org/blog/release-26.8.0`,
-    de_DE: `Aktualisiert Actual Budget auf 26.8.0.
+Notas completas de la versión: https://actualbudget.org/blog/release-26.8.1`,
+    de_DE: `Aktualisiert Actual Budget auf 26.8.1, eine Fehlerbehebungsversion.
 
-- Der Bericht „Age of Money“ und Zahlungsempfänger-Standorte sind jetzt stabile Funktionen.
-- Neu gestaltete Einführungsbildschirme und eine einfachere Einrichtung des ersten Kontos.
-- Mobil: Kontenabgleich sowie Einrichtung von Bank-Sync-Anbietern und Verknüpfung von Konten direkt auf der Bank-Sync-Seite.
-- Berichte: Datumsbereichsauswahl auf Tagesebene und CSV-Export der Budgetanalyse.
-- Serverpasswörter werden jetzt mit argon2id statt bcrypt gehasht; vorhandene Passwörter werden bei der nächsten Anmeldung automatisch umgestellt, es ist nichts zu tun.
-- Viele Korrekturen bei der Bank-Synchronisierung (GoCardless, SimpleFIN, Pluggy) und bei der OIDC-Anmeldung.
+- Behebt zeitweilige Einfrierer der App bei 100 % CPU-Auslastung.
+- Behebt, dass die Transaktionsliste mit wachsendem Budget langsamer wurde, insbesondere beim Hinzufügen, Bestätigen und Löschen von Transaktionen sowie beim Abgleich.
+- Behebt das Erscheinen des Kontextmenüs in kontenübergreifenden Ansichten.
+- Stellt die Option „Löschen“ im Zeilenmenü der Seite „Zeitpläne“ wieder her.
 
-Vollständige Versionshinweise: https://actualbudget.org/blog/release-26.8.0`,
-    pl_PL: `Aktualizuje Actual Budget do 26.8.0.
+Vollständige Versionshinweise: https://actualbudget.org/blog/release-26.8.1`,
+    pl_PL: `Aktualizuje Actual Budget do 26.8.1, wydania poprawkowego.
 
-- Raport Age of Money oraz Lokalizacje odbiorców są teraz stabilnymi funkcjami.
-- Przeprojektowane ekrany wprowadzające i łatwiejsza konfiguracja pierwszego konta.
-- Wersja mobilna: uzgadnianie kont oraz konfiguracja dostawców synchronizacji bankowej i łączenie kont ze strony synchronizacji bankowej.
-- Raporty: wybór zakresu dat z dokładnością do dnia i eksport analizy budżetu do CSV.
-- Hasła serwera są teraz hashowane algorytmem argon2id zamiast bcrypt; istniejące hasła są migrowane automatycznie przy następnym logowaniu, nie trzeba nic robić.
-- Wiele poprawek synchronizacji bankowej (GoCardless, SimpleFIN, Pluggy) oraz logowania OIDC.
+- Naprawia sporadyczne zawieszanie się aplikacji przy 100% użycia procesora.
+- Naprawia spowalnianie listy transakcji wraz ze wzrostem budżetu, zwłaszcza przy dodawaniu, rozliczaniu i usuwaniu transakcji oraz podczas uzgadniania.
+- Naprawia wyświetlanie menu kontekstowego w widokach wielu kont.
+- Przywraca opcję „Usuń” w menu wiersza na stronie Harmonogramów.
 
-Pełne informacje o wersji: https://actualbudget.org/blog/release-26.8.0`,
-    fr_FR: `Met à jour Actual Budget vers 26.8.0.
+Pełne informacje o wersji: https://actualbudget.org/blog/release-26.8.1`,
+    fr_FR: `Met à jour Actual Budget vers 26.8.1, une version corrective.
 
-- Le rapport Age of Money et les Emplacements des bénéficiaires sont désormais des fonctionnalités stables.
-- Écrans d'accueil repensés et configuration du premier compte simplifiée.
-- Mobile : rapprochement des comptes, configuration des fournisseurs de synchronisation bancaire et association des comptes depuis la page de synchronisation bancaire.
-- Rapports : sélection de plages de dates au jour près et export CSV de l'analyse budgétaire.
-- Les mots de passe du serveur sont désormais hachés avec argon2id au lieu de bcrypt ; les mots de passe existants sont migrés automatiquement à la prochaine connexion, aucune action n'est requise.
-- De nombreuses corrections de la synchronisation bancaire (GoCardless, SimpleFIN, Pluggy) et de la connexion OIDC.
+- Corrige les blocages intermittents de l'application avec une utilisation du processeur à 100 %.
+- Corrige le ralentissement de la liste des transactions à mesure que le budget grandit, en particulier lors de l'ajout, du pointage ou de la suppression de transactions et lors du rapprochement.
+- Corrige l'affichage du menu contextuel dans les vues multi-comptes.
+- Rétablit l'option « Supprimer » dans le menu de ligne de la page Échéanciers.
 
-Notes de version complètes : https://actualbudget.org/blog/release-26.8.0`,
+Notes de version complètes : https://actualbudget.org/blog/release-26.8.1`,
   },
   migrations: {
     up: async ({ effects }) => {},
