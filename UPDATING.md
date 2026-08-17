@@ -1,6 +1,6 @@
 # Updating the upstream version
 
-Actual Budget is built from a git submodule at `actual/` (tracking [`actualbudget/actual`](https://github.com/actualbudget/actual)), using `actual/sync-server.Dockerfile` from upstream. There is no pinned `dockerTag` in the manifest — the image is built fresh from whatever commit the submodule points at, so the submodule pin **is** the upstream version.
+Actual Budget is built from a git submodule at `actual/` (tracking [`actualbudget/actual`](https://github.com/actualbudget/actual)), which supplies the build context; the recipe is this repo's own `sync-server.Dockerfile` at the root, a modified copy of upstream's. There is no pinned `dockerTag` in the manifest — the image is built fresh from whatever commit the submodule points at, so the submodule pin **is** the upstream version.
 
 ## Determining the upstream version
 
