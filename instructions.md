@@ -14,7 +14,8 @@
 On install, StartOS posts a critical task to retrieve your admin password.
 
 1. Run the **Get Admin Password** task and copy the password somewhere safe.
-2. Open the **Web UI** interface, paste the password, and start a new budget or restore from a backup.
+2. Start the service.
+3. Open the **Web UI** interface, paste the password, and start a new budget or restore from a backup.
 
 ## Using Actual Budget
 

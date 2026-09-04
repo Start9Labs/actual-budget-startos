@@ -1,48 +1,43 @@
 import { VersionInfo, IMPOSSIBLE } from '@start9labs/start-sdk'
 
 export const current = VersionInfo.of({
-  version: '26.8.1:0',
+  version: '26.9.0:0',
   releaseNotes: {
-    en_US: `Updated Actual Budget to 26.8.1, a bugfix release.
+    en_US: `Updated Actual Budget to 26.9.0.
 
-- Fixes intermittent app freezes with 100% CPU usage.
-- Fixes the transaction list getting slower as a budget grows, especially when adding, clearing, or deleting transactions and when reconciling.
-- Fixes the context menu showing on multi-account views.
-- Restores the "Delete" option in the schedule row menu on the Schedules page.
+- Adds customizable transaction-table columns, a guided tour for new users, global tag renaming, and drag-and-drop schedule ordering.
+- Adds an experimental retirement Monte Carlo report, formula-report improvements, and four currencies.
+- Fixes issues across bank sync, schedules, transfers, rules, reports, mobile layouts, and login error handling.
 
-Full release notes: https://actualbudget.org/blog/release-26.8.1`,
-    es_ES: `Actualiza Actual Budget a 26.8.1, una versión de corrección de errores.
+Full release notes: https://actualbudget.org/blog/release-26.9.0`,
+    es_ES: `Actualiza Actual Budget a 26.9.0.
 
-- Corrige los bloqueos intermitentes de la aplicación con un 100 % de uso de CPU.
-- Corrige la ralentización de la lista de transacciones a medida que crece el presupuesto, especialmente al añadir, confirmar o eliminar transacciones y al conciliar.
-- Corrige la aparición del menú contextual en las vistas de varias cuentas.
-- Restaura la opción «Eliminar» en el menú de fila de la página de Programaciones.
+- Añade columnas personalizables en la tabla de transacciones, una visita guiada para nuevos usuarios, el cambio de nombre global de etiquetas y la ordenación de programaciones mediante arrastrar y soltar.
+- Añade un informe Monte Carlo experimental para la jubilación, mejoras en los informes de fórmulas y cuatro monedas.
+- Corrige problemas de sincronización bancaria, programaciones, transferencias, reglas, informes, diseños móviles y gestión de errores de inicio de sesión.
 
-Notas completas de la versión: https://actualbudget.org/blog/release-26.8.1`,
-    de_DE: `Aktualisiert Actual Budget auf 26.8.1, eine Fehlerbehebungsversion.
+Notas completas de la versión: https://actualbudget.org/blog/release-26.9.0`,
+    de_DE: `Aktualisiert Actual Budget auf 26.9.0.
 
-- Behebt zeitweilige Einfrierer der App bei 100 % CPU-Auslastung.
-- Behebt, dass die Transaktionsliste mit wachsendem Budget langsamer wurde, insbesondere beim Hinzufügen, Bestätigen und Löschen von Transaktionen sowie beim Abgleich.
-- Behebt das Erscheinen des Kontextmenüs in kontenübergreifenden Ansichten.
-- Stellt die Option „Löschen“ im Zeilenmenü der Seite „Zeitpläne“ wieder her.
+- Fügt anpassbare Spalten in der Transaktionstabelle, eine Einführung für neue Benutzer, das globale Umbenennen von Tags und die Sortierung von Zeitplänen per Drag-and-drop hinzu.
+- Fügt einen experimentellen Monte-Carlo-Bericht zur Altersvorsorge, Verbesserungen an Formelberichten und vier Währungen hinzu.
+- Behebt Probleme bei Banksynchronisierung, Zeitplänen, Überweisungen, Regeln, Berichten, mobilen Ansichten und der Fehlerbehandlung bei der Anmeldung.
 
-Vollständige Versionshinweise: https://actualbudget.org/blog/release-26.8.1`,
-    pl_PL: `Aktualizuje Actual Budget do 26.8.1, wydania poprawkowego.
+Vollständige Versionshinweise: https://actualbudget.org/blog/release-26.9.0`,
+    pl_PL: `Aktualizuje Actual Budget do 26.9.0.
 
-- Naprawia sporadyczne zawieszanie się aplikacji przy 100% użycia procesora.
-- Naprawia spowalnianie listy transakcji wraz ze wzrostem budżetu, zwłaszcza przy dodawaniu, rozliczaniu i usuwaniu transakcji oraz podczas uzgadniania.
-- Naprawia wyświetlanie menu kontekstowego w widokach wielu kont.
-- Przywraca opcję „Usuń” w menu wiersza na stronie Harmonogramów.
+- Dodaje konfigurowalne kolumny tabeli transakcji, przewodnik dla nowych użytkowników, globalną zmianę nazw tagów i porządkowanie harmonogramów metodą przeciągania i upuszczania.
+- Dodaje eksperymentalny raport emerytalny Monte Carlo, ulepszenia raportów formuł i cztery waluty.
+- Naprawia problemy z synchronizacją bankową, harmonogramami, przelewami, regułami, raportami, widokami mobilnymi i obsługą błędów logowania.
 
-Pełne informacje o wersji: https://actualbudget.org/blog/release-26.8.1`,
-    fr_FR: `Met à jour Actual Budget vers 26.8.1, une version corrective.
+Pełne informacje o wersji: https://actualbudget.org/blog/release-26.9.0`,
+    fr_FR: `Met à jour Actual Budget vers 26.9.0.
 
-- Corrige les blocages intermittents de l'application avec une utilisation du processeur à 100 %.
-- Corrige le ralentissement de la liste des transactions à mesure que le budget grandit, en particulier lors de l'ajout, du pointage ou de la suppression de transactions et lors du rapprochement.
-- Corrige l'affichage du menu contextuel dans les vues multi-comptes.
-- Rétablit l'option « Supprimer » dans le menu de ligne de la page Échéanciers.
+- Ajoute des colonnes personnalisables dans le tableau des transactions, une visite guidée pour les nouveaux utilisateurs, le renommage global des étiquettes et le classement des échéanciers par glisser-déposer.
+- Ajoute un rapport Monte-Carlo expérimental sur la retraite, des améliorations aux rapports de formules et quatre devises.
+- Corrige des problèmes liés à la synchronisation bancaire, aux échéanciers, aux virements, aux règles, aux rapports, aux vues mobiles et à la gestion des erreurs de connexion.
 
-Notes de version complètes : https://actualbudget.org/blog/release-26.8.1`,
+Notes de version complètes : https://actualbudget.org/blog/release-26.9.0`,
   },
   migrations: {
     up: async ({ effects }) => {},
