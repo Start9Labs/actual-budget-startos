@@ -37,11 +37,11 @@
 
 The image is built here rather than pulled: upstream is vendored as a git submodule and supplies the build context, while the Dockerfile is this repo's own copy of upstream's.
 
-| Property      | Value                                                                         |
-| ------------- | ----------------------------------------------------------------------------- |
-| Image         | Built from `sync-server.Dockerfile` against the `actual/` submodule           |
-| Architectures | x86_64, aarch64                                                               |
-| Command       | `node build/app.js` — the image's own, on a slim Node base as a non-root user |
+| Property      | Value                                                               |
+| ------------- | ------------------------------------------------------------------- |
+| Image         | Built from `sync-server.Dockerfile` against the `actual/` submodule |
+| Architectures | x86_64, aarch64                                                     |
+| Command       | `node build/app.js` — the image's own, on a slim Node base          |
 
 The Dockerfile is a copy rather than a reference because upstream's does not build standalone here. It seeds a throwaway git repo so upstream's task runner can hash its inputs, and it materializes `@actual-app/web` and `@actual-app/crdt` into `node_modules/` — both are workspace symlinks that dangle in the final stage, which does not carry `packages/`.
 
@@ -58,7 +58,7 @@ One volume, holding everything the sync server writes.
 | ------ | ----------- | --------------------------------------------------------------------- |
 | `main` | `/data`     | Budget files, user files, the server's own database, and `store.json` |
 
-The image creates `/data` owned by its non-root user at build time, so nothing needs to fix ownership at runtime.
+StartOS mounts the `main` volume at `/data`. The image's default root process can write it directly, so no runtime ownership step is needed.
 
 ## File Models
 
@@ -94,7 +94,7 @@ Install replaces upstream's first-run wizard, which is the one substantive diffe
 2. **The server is booted once** in a temporary subcontainer and the package POSTs to its `/account/bootstrap` endpoint to register the admin account with that password, then shuts it down. This is reported as an install progress phase and is bounded at five minutes; if it does not succeed, init fails and StartOS rolls the install back.
 3. **A critical task is raised** pointing at Get Admin Password — see [Tasks](#tasks).
 
-There is no ordering constraint beyond that: once the task is cleared, open the Web UI and log in with the password.
+There is no ordering constraint beyond that: once the task is cleared, start the service, open the Web UI, and log in with the password.
 
 ## Actions
 

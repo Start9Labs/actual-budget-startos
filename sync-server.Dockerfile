@@ -1,4 +1,4 @@
-FROM node:22-bookworm AS deps
+FROM node:24-bookworm AS deps
 
 # Install required packages
 RUN apt-get update && apt-get install -y openssl
@@ -58,7 +58,7 @@ RUN cp -r ./packages/desktop-client/build ./node_modules/@actual-app/web/build
 COPY ./packages/crdt/package.json ./node_modules/@actual-app/crdt/package.json
 RUN cp -r ./packages/crdt/dist ./node_modules/@actual-app/crdt/dist
 
-FROM node:22-bookworm-slim AS prod
+FROM node:24-bookworm-slim AS prod
 
 # Minimal runtime dependencies
 RUN apt-get update && apt-get install -y tini && apt-get clean -y && rm -rf /var/lib/apt/lists/*
