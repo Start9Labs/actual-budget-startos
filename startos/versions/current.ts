@@ -1,43 +1,48 @@
 import { VersionInfo, IMPOSSIBLE } from '@start9labs/start-sdk'
 
 export const current = VersionInfo.of({
-  version: '26.9.0:0',
+  version: '26.10.0:0',
   releaseNotes: {
-    en_US: `Updated Actual Budget to 26.9.0.
+    en_US: `Updated Actual Budget to 26.10.0.
 
-- Adds customizable transaction-table columns, a guided tour for new users, global tag renaming, and drag-and-drop schedule ordering.
-- Adds an experimental retirement Monte Carlo report, formula-report improvements, and four currencies.
-- Fixes issues across bank sync, schedules, transfers, rules, reports, mobile layouts, and login error handling.
+- Speeds up transaction editing and improves syncing between devices running different versions.
+- Adds in-app release notifications and an experimental redesigned sidebar with searchable, reorderable account groups.
+- Expands the experimental Monte Carlo report with income streams, yearly cashflow, and custom asset allocations.
+- Fixes bank-import encoding, stuck schedules, offline browser startup, and the mobile date picker.
 
-Full release notes: https://actualbudget.org/blog/release-26.9.0`,
-    es_ES: `Actualiza Actual Budget a 26.9.0.
+Full release notes: https://actualbudget.org/blog/release-26.10.0`,
+    es_ES: `Actualiza Actual Budget a 26.10.0.
 
-- Añade columnas personalizables en la tabla de transacciones, una visita guiada para nuevos usuarios, el cambio de nombre global de etiquetas y la ordenación de programaciones mediante arrastrar y soltar.
-- Añade un informe Monte Carlo experimental para la jubilación, mejoras en los informes de fórmulas y cuatro monedas.
-- Corrige problemas de sincronización bancaria, programaciones, transferencias, reglas, informes, diseños móviles y gestión de errores de inicio de sesión.
+- Acelera la edición de transacciones y mejora la sincronización entre dispositivos con versiones diferentes.
+- Añade notificaciones de versiones dentro de la aplicación y una barra lateral rediseñada experimental con grupos de cuentas que se pueden buscar y reordenar.
+- Amplía el informe Monte Carlo experimental con fuentes de ingresos, flujo de caja anual y asignaciones de activos personalizadas.
+- Corrige la codificación de importaciones bancarias, las programaciones bloqueadas, el inicio sin conexión en el navegador y el selector de fechas en móviles.
 
-Notas completas de la versión: https://actualbudget.org/blog/release-26.9.0`,
-    de_DE: `Aktualisiert Actual Budget auf 26.9.0.
+Notas completas de la versión: https://actualbudget.org/blog/release-26.10.0`,
+    de_DE: `Aktualisiert Actual Budget auf 26.10.0.
 
-- Fügt anpassbare Spalten in der Transaktionstabelle, eine Einführung für neue Benutzer, das globale Umbenennen von Tags und die Sortierung von Zeitplänen per Drag-and-drop hinzu.
-- Fügt einen experimentellen Monte-Carlo-Bericht zur Altersvorsorge, Verbesserungen an Formelberichten und vier Währungen hinzu.
-- Behebt Probleme bei Banksynchronisierung, Zeitplänen, Überweisungen, Regeln, Berichten, mobilen Ansichten und der Fehlerbehandlung bei der Anmeldung.
+- Beschleunigt die Bearbeitung von Transaktionen und verbessert die Synchronisierung zwischen Geräten mit unterschiedlichen Versionen.
+- Fügt Versionsbenachrichtigungen in der App und eine experimentelle neue Seitenleiste mit durchsuchbaren, umsortierbaren Kontogruppen hinzu.
+- Erweitert den experimentellen Monte-Carlo-Bericht um Einkommensquellen, jährlichen Cashflow und individuelle Vermögensaufteilungen.
+- Behebt Zeichenkodierungsfehler beim Bankimport, festhängende Zeitpläne, den Offline-Start im Browser und die mobile Datumsauswahl.
 
-Vollständige Versionshinweise: https://actualbudget.org/blog/release-26.9.0`,
-    pl_PL: `Aktualizuje Actual Budget do 26.9.0.
+Vollständige Versionshinweise: https://actualbudget.org/blog/release-26.10.0`,
+    pl_PL: `Aktualizuje Actual Budget do 26.10.0.
 
-- Dodaje konfigurowalne kolumny tabeli transakcji, przewodnik dla nowych użytkowników, globalną zmianę nazw tagów i porządkowanie harmonogramów metodą przeciągania i upuszczania.
-- Dodaje eksperymentalny raport emerytalny Monte Carlo, ulepszenia raportów formuł i cztery waluty.
-- Naprawia problemy z synchronizacją bankową, harmonogramami, przelewami, regułami, raportami, widokami mobilnymi i obsługą błędów logowania.
+- Przyspiesza edycję transakcji i poprawia synchronizację między urządzeniami z różnymi wersjami.
+- Dodaje powiadomienia o wydaniach w aplikacji oraz eksperymentalny przeprojektowany panel boczny z wyszukiwaniem i zmianą kolejności grup kont.
+- Rozszerza eksperymentalny raport Monte Carlo o źródła dochodów, roczne przepływy pieniężne i niestandardowe alokacje aktywów.
+- Naprawia kodowanie importów bankowych, zablokowane harmonogramy, uruchamianie bez sieci w przeglądarce i mobilny wybór daty.
 
-Pełne informacje o wersji: https://actualbudget.org/blog/release-26.9.0`,
-    fr_FR: `Met à jour Actual Budget vers 26.9.0.
+Pełne informacje o wersji: https://actualbudget.org/blog/release-26.10.0`,
+    fr_FR: `Met à jour Actual Budget vers 26.10.0.
 
-- Ajoute des colonnes personnalisables dans le tableau des transactions, une visite guidée pour les nouveaux utilisateurs, le renommage global des étiquettes et le classement des échéanciers par glisser-déposer.
-- Ajoute un rapport Monte-Carlo expérimental sur la retraite, des améliorations aux rapports de formules et quatre devises.
-- Corrige des problèmes liés à la synchronisation bancaire, aux échéanciers, aux virements, aux règles, aux rapports, aux vues mobiles et à la gestion des erreurs de connexion.
+- Accélère la modification des transactions et améliore la synchronisation entre appareils utilisant des versions différentes.
+- Ajoute des notifications de version dans l'application et une barre latérale expérimentale repensée avec recherche et réorganisation des groupes de comptes.
+- Enrichit le rapport Monte-Carlo expérimental avec des sources de revenus, des flux de trésorerie annuels et des répartitions d'actifs personnalisées.
+- Corrige l'encodage des imports bancaires, les échéanciers bloqués, le démarrage hors ligne dans le navigateur et le sélecteur de date sur mobile.
 
-Notes de version complètes : https://actualbudget.org/blog/release-26.9.0`,
+Notes de version complètes : https://actualbudget.org/blog/release-26.10.0`,
   },
   migrations: {
     up: async ({ effects }) => {},
