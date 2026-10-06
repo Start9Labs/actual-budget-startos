@@ -18,12 +18,20 @@ Freshly scaffolded? Work the
 guide page, not a file in this repo — read it, don't copy it in.
 
 Keep `README.md` (technical reference for an AI support or administering agent) and
-`instructions.md` (end-user docs) in sync with your changes.
+`instructions.md` (end-user docs) in sync with your changes. This file restates neither:
+whoever changes the package has both, so it carries only what they don't — repo mechanics,
+a change that looks right and is not, where the next thing gets added, a naming trap, a
+build or test invocation particular to this repo.
 
-**Bugs and feature requests are GitHub issues on this repo** — file them as you find them.
+**Fix a defect you spot rather than reporting it** — you have the package open and the
+context to be sure. File **a GitHub issue on this repo** only when the call isn't yours to
+make: you can't pin the cause down, two defensible fixes exist, or it's too large to ride on
+the work in hand. An open issue is a report, not a queue — implement one when you're asked
+to or when it's labelled `Approved`, then close it with `Closes #<n>`.
+
 Don't record work in the repo instead: no `TODO.md`, no `NOTES.md`, no `PLAN.md`. What you
 verified, tried, and decided belongs in the commit message and the PR body.
 
 ## This repo
 
-- **`sync-server.Dockerfile` at the repo root is the one that builds; `actual/sync-server.Dockerfile` is not.** `dockerfile` in the manifest is resolved from the project root, while `workdir` only sets the build context — so the submodule supplies the sources and this copy supplies the recipe. Re-check it against upstream's on a submodule bump: it carries two fixes upstream's does not need (a throwaway git repo for the task hasher, and copying `@actual-app/web` / `@actual-app/crdt` out of `packages/` because the final stage does not have it).
+- **Edit the root `sync-server.Dockerfile`, never `actual/sync-server.Dockerfile`** — the manifest builds from the root copy, and its fixes are lost if it is replaced with upstream's. Re-check it against upstream's on every submodule bump.

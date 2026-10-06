@@ -13,12 +13,13 @@ const dict = {
 
   // actions/getAdminPassword.ts
   'Get Admin Password': 6,
-  'Retrieve the password for Actual Budget': 7,
-
-  // init/initializeService.ts
-  'Retrieve the admin password': 8,
+  'Show the admin password generated at install. If you change the password inside Actual Budget, this still shows the original.': 7,
+  'Admin Password': 10,
+  'Use this password to log in to Actual Budget:': 11,
+  Password: 12,
 
   // init/bootstrapServer.ts
+  'Retrieve the admin password': 8,
   'Creating the Actual Budget admin account': 9,
 } as const
 

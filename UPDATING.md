@@ -24,4 +24,4 @@ cd actual && git fetch --tags && git checkout v<new version>
 cd .. && git add actual
 ```
 
-Compare the root `sync-server.Dockerfile` with upstream's recipe for build changes, keeping the package-specific fixes described in `AGENTS.md`. Update `startos/versions/current.ts` to `<new version>:0` and summarize the release highlights in every locale, linking to the complete upstream notes. This is an in-place edit unless the outgoing version has a nonempty migration.
+Compare the root `sync-server.Dockerfile` with upstream's recipe for build changes, keeping the package-specific fixes described in `README.md` § Image and Container Runtime. Update `startos/versions/current.ts` to `<new version>:0` and summarize the release highlights in every locale, linking to the complete upstream notes. This is an in-place edit unless the outgoing version has a nonempty migration.

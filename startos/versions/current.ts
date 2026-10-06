@@ -1,7 +1,7 @@
 import { VersionInfo, IMPOSSIBLE } from '@start9labs/start-sdk'
 
 export const current = VersionInfo.of({
-  version: '26.10.0:0',
+  version: '26.10.0:1',
   releaseNotes: {
     en_US: `Updated Actual Budget to 26.10.0.
 
@@ -10,7 +10,10 @@ export const current = VersionInfo.of({
 - Expands the experimental Monte Carlo report with income streams, yearly cashflow, and custom asset allocations.
 - Fixes bank-import encoding, stuck schedules, offline browser startup, and the mobile date picker.
 
-Full release notes: https://actualbudget.org/blog/release-26.10.0`,
+Full release notes: https://actualbudget.org/blog/release-26.10.0
+
+- Get Admin Password's result is shown in your language.
+- Get Admin Password's description explains that it shows the password generated at install, not one you changed later inside Actual Budget.`,
     es_ES: `Actualiza Actual Budget a 26.10.0.
 
 - Acelera la edición de transacciones y mejora la sincronización entre dispositivos con versiones diferentes.
@@ -18,7 +21,10 @@ Full release notes: https://actualbudget.org/blog/release-26.10.0`,
 - Amplía el informe Monte Carlo experimental con fuentes de ingresos, flujo de caja anual y asignaciones de activos personalizadas.
 - Corrige la codificación de importaciones bancarias, las programaciones bloqueadas, el inicio sin conexión en el navegador y el selector de fechas en móviles.
 
-Notas completas de la versión: https://actualbudget.org/blog/release-26.10.0`,
+Notas completas de la versión: https://actualbudget.org/blog/release-26.10.0
+
+- El resultado de Obtener contraseña de administrador se muestra en tu idioma.
+- La descripción de Obtener contraseña de administrador explica que muestra la contraseña generada durante la instalación, no una que hayas cambiado después dentro de Actual Budget.`,
     de_DE: `Aktualisiert Actual Budget auf 26.10.0.
 
 - Beschleunigt die Bearbeitung von Transaktionen und verbessert die Synchronisierung zwischen Geräten mit unterschiedlichen Versionen.
@@ -26,7 +32,10 @@ Notas completas de la versión: https://actualbudget.org/blog/release-26.10.0`,
 - Erweitert den experimentellen Monte-Carlo-Bericht um Einkommensquellen, jährlichen Cashflow und individuelle Vermögensaufteilungen.
 - Behebt Zeichenkodierungsfehler beim Bankimport, festhängende Zeitpläne, den Offline-Start im Browser und die mobile Datumsauswahl.
 
-Vollständige Versionshinweise: https://actualbudget.org/blog/release-26.10.0`,
+Vollständige Versionshinweise: https://actualbudget.org/blog/release-26.10.0
+
+- Das Ergebnis von „Admin-Passwort abrufen“ wird in Ihrer Sprache angezeigt.
+- Die Beschreibung von „Admin-Passwort abrufen“ erklärt, dass das bei der Installation erzeugte Passwort angezeigt wird, nicht eines, das Sie später in Actual Budget geändert haben.`,
     pl_PL: `Aktualizuje Actual Budget do 26.10.0.
 
 - Przyspiesza edycję transakcji i poprawia synchronizację między urządzeniami z różnymi wersjami.
@@ -34,7 +43,10 @@ Vollständige Versionshinweise: https://actualbudget.org/blog/release-26.10.0`,
 - Rozszerza eksperymentalny raport Monte Carlo o źródła dochodów, roczne przepływy pieniężne i niestandardowe alokacje aktywów.
 - Naprawia kodowanie importów bankowych, zablokowane harmonogramy, uruchamianie bez sieci w przeglądarce i mobilny wybór daty.
 
-Pełne informacje o wersji: https://actualbudget.org/blog/release-26.10.0`,
+Pełne informacje o wersji: https://actualbudget.org/blog/release-26.10.0
+
+- Wynik akcji „Pobierz hasło administratora” jest wyświetlany w Twoim języku.
+- Opis akcji „Pobierz hasło administratora” wyjaśnia, że pokazuje ona hasło wygenerowane podczas instalacji, a nie hasło zmienione później w Actual Budget.`,
     fr_FR: `Met à jour Actual Budget vers 26.10.0.
 
 - Accélère la modification des transactions et améliore la synchronisation entre appareils utilisant des versions différentes.
@@ -42,7 +54,10 @@ Pełne informacje o wersji: https://actualbudget.org/blog/release-26.10.0`,
 - Enrichit le rapport Monte-Carlo expérimental avec des sources de revenus, des flux de trésorerie annuels et des répartitions d'actifs personnalisées.
 - Corrige l'encodage des imports bancaires, les échéanciers bloqués, le démarrage hors ligne dans le navigateur et le sélecteur de date sur mobile.
 
-Notes de version complètes : https://actualbudget.org/blog/release-26.10.0`,
+Notes de version complètes : https://actualbudget.org/blog/release-26.10.0
+
+- Le résultat d'Obtenir le mot de passe d'administration s'affiche dans votre langue.
+- La description d'Obtenir le mot de passe d'administration précise que l'action affiche le mot de passe généré à l'installation, et non un mot de passe que vous avez modifié ensuite dans Actual Budget.`,
   },
   migrations: {
     up: async ({ effects }) => {},
