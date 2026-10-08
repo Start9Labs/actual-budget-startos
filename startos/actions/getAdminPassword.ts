@@ -7,7 +7,9 @@ export const getAdminPassword = sdk.Action.withoutInput(
 
   async ({ effects }) => ({
     name: i18n('Get Admin Password'),
-    description: i18n('Retrieve the password for Actual Budget'),
+    description: i18n(
+      'Show the admin password generated at install. If you change the password inside Actual Budget, this still shows the original.',
+    ),
     warning: null,
     allowedStatuses: 'any',
     group: null,
@@ -19,11 +21,11 @@ export const getAdminPassword = sdk.Action.withoutInput(
 
     return {
       version: '1',
-      title: 'Admin Password',
-      message: 'Use this password to log in to Actual Budget:',
+      title: i18n('Admin Password'),
+      message: i18n('Use this password to log in to Actual Budget:'),
       result: {
         type: 'single',
-        name: 'Password',
+        name: i18n('Password'),
         description: null,
         value: password ?? 'UNKNOWN',
         masked: true,
