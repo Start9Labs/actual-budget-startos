@@ -23,6 +23,8 @@ On install, StartOS posts a critical task to retrieve your admin password.
 
 The web interface is where you create budgets, enter transactions, build categories and rules, and connect bank sync. The login uses the admin password from setup.
 
+If you use a private SimpleFIN bridge, ask your server administrator to allow its IP in the server configuration. This package has no configuration action for that setting; see the [upstream server configuration guide](https://actualbudget.org/docs/config/#actual_simplefin_allowed_networks-configjson-simplefinallowednetworks). Public SimpleFIN bridges need no allowlist.
+
 ### Actions
 
 - **Get Admin Password** — re-display the admin password at any time.

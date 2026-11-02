@@ -70,7 +70,7 @@ One model, and it holds a single value: the password this package generated for 
 
 `adminPassword` is generated once, at install, as 24 random alphanumeric characters. Later inits merge the file without touching it, so the value is stable for the life of the install and the [Get Admin Password](#actions) action can always return it. It is stored in plain text on the `main` volume and is therefore captured by backups.
 
-**The package writes no upstream configuration.** Actual Budget keeps its settings, budgets, and accounts in its own database under `/data`, and this package neither reads nor rewrites any of it — there is no config file on disk to inspect or correct, and nothing a change you make in the web UI can be reverted by.
+**The package writes no upstream configuration.** Actual Budget keeps its settings, budgets, and accounts under `/data`, and this package neither reads nor rewrites them. An administrator can supply upstream server settings in `/data/config.json`; this file is not modeled or rewritten by the package and is included in volume backups. Private SimpleFIN bridges require `simplefinAllowedNetworks` in that file, with the bridge's IP explicitly allowed; prefer one IP over a subnet. There is no StartOS configuration action for this setting.
 
 ## Dependencies
 
