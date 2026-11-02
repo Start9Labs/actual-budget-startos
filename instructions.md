@@ -23,7 +23,7 @@ On install, StartOS posts a critical task to retrieve your admin password.
 
 The web interface is where you create budgets, enter transactions, build categories and rules, and connect bank sync. The login uses the admin password from setup.
 
-If you use a private SimpleFIN bridge, ask your server administrator to allow its IP in the server configuration. This package has no configuration action for that setting; see the [upstream server configuration guide](https://actualbudget.org/docs/config/#actual_simplefin_allowed_networks-configjson-simplefinallowednetworks). Public SimpleFIN bridges need no allowlist.
+Public SimpleFIN bridges need no setup. A private SimpleFIN bridge must be allowed by IP in Actual's `config.json`, and there is no action for this setting, so it takes SSH access to your server. Edit `/media/startos/data/package-data/volumes/actual-budget/data/main/config.json` (create it if it does not exist) so that it lists the bridge's IP, for example `{ "simplefinAllowedNetworks": ["192.168.1.50"] }`, then restart Actual Budget. Allow the single IP rather than a subnet. See the [upstream server configuration guide](https://actualbudget.org/docs/config/#actual_simplefin_allowed_networks-configjson-simplefinallowednetworks) for the setting's format.
 
 ### Actions
 
